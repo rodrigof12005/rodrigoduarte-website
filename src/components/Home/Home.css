@@ -1,93 +1,145 @@
-
 /* src/components/Home.css - Estilos específicos para a seção Home */
 
 .home-section {
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-grow: 1;
-    min-height: calc(100vh - 60px);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: calc(100vh - 60px);
+}
+
+.greeting {
+  font-size: 2em;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.introduction {
+  font-size: 3.5em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+.introduction .highlight {
+  color: var(--purple-accent);
+}
+
+.bio-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.description {
+  font-size: 1.1em;
+  color: var(--text-gray);
+  max-width: 600px;
+  margin-bottom: 70px;
+  text-align: justify;
+}
+
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-end;
+  max-width: 370px;
+}
+
+.tech-logos img {
+  width: 80px;
+  height: 70px;
+}
+
+.tech-logos img:hover {
+  filter: grayscale(0%) brightness(100%);
+}
+
+/* --- Estilos para os Botões de Ação --- */
+.action-buttons {
+  display: flex; /* Adiciona o Flexbox para alinhar os botões */
+  justify-content: center; /* Centraliza os botões */
+  gap: 15px; /* Adiciona espaçamento entre os botões */
+}
+
+.action-buttons .btn {
+  background-color: transparent;
+  color: var(--purple-accent);
+  border: 2px solid var(--purple-accent);
+  padding: 12px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.action-buttons .btn-portfolio {
+  background-color: var(--purple-accent);
+  color: var(--text-light);
+  border-color: var(--purple-accent);
+}
+
+.action-buttons .btn-portfolio:hover {
+  background-color: var(--button-hover-darken);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+.action-buttons .btn-hireme:hover {
+  background-color: var(--purple-accent);
+  color: var(--text-light);
+  box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+}
+
+/* ------------------------------------------------ */
+/* MEDIA QUERY: Estilos para telas menores (< 768px) */
+/* ------------------------------------------------ */
+
+@media (max-width: 768px) {
+  .home-section {
+    padding: 20px; /* Reduz o padding em telas pequenas */
   }
-  
-  .greeting {
-    font-size: 2em;
-    color: var(--text-light);
-    margin-bottom: 10px;
-  }
-  
+
   .introduction {
-    font-size: 3.5em;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    color: var(--text-light);
+    font-size: 2.5em; /* Diminui o tamanho do título */
   }
-  
-  .introduction .highlight {
-    color: var(--purple-accent);
-  }
+
   .bio-container {
-    display: flex; /* Transforma em um container flexível */
-    flex-direction: row; /* Coloca os elementos lado a lado */
-    gap: 40px; /* Espaço entre a descrição e os logos */
-    align-items: flex-start; /* Alinha o início dos elementos na vertical */
-    margin-bottom: 50px; /* Espaço entre este container e os botões de ação */
+    flex-direction: column; /* Empilha a bio e os logos verticalmente */
+    align-items: center; /* Centraliza os itens empilhados */
+    gap: 20px; /* Reduz o espaçamento */
   }
-  
-  
+
   .description {
-    font-size: 1.1em;
-    color: var(--text-gray);
-    max-width: 600px;
-    margin-bottom: 70px;
-    text-align: justify; /* O estilo que você adicionou */
+    max-width: 100%; /* Permite que a descrição ocupe a largura total */
+    margin-bottom: 20px; /* Reduz o espaço inferior */
   }
 
   .tech-logos {
-    display: flex;
-    flex-wrap: wrap; /* Permite que os logos quebrem a linha */
-    gap: 20px; /* Espaço entre cada logo */
-    justify-content: flex-end; /* Alinha os logos à direita */
-    max-width: 370px; /* Limita a largura do container de logos */
+    max-width: 100%; /* Permite que os logos ocupem a largura total */
+    justify-content: center; /* Centraliza os logos */
+    gap: 15px; /* Reduz o espaçamento entre os logos */
   }
-  
+
   .tech-logos img {
-    width: 80px; /* Tamanho dos logos, ajuste se necessário */
-    height: 70px;
+    width: 60px; /* Diminui o tamanho dos logos para caberem melhor */
+    height: auto;
   }
-  
-  .tech-logos img:hover {
-    filter: grayscale(0%) brightness(100%); /* Colore o logo ao passar o mouse */
+
+  .action-buttons {
+    flex-direction: column; /* Empilha os botões verticalmente */
+    width: 90%; /* Faz o container ocupar mais espaço para os botões */
+    margin-top: 20px; /* Reduz o espaçamento superior */
   }
-  
-  /* --- Estilos para os Botões de Ação --- */
+
   .action-buttons .btn {
-    background-color: transparent;
-    color: var(--purple-accent);
-    border: 2px solid var(--purple-accent);
-    padding: 12px 25px;
-    margin-right: 15px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none; /* O estilo que você adicionou */
+    width: 100%; /* Faz com que os botões tenham a largura total do container */
+    margin: 0; /* Remove a margem extra entre os botões */
   }
-  
-  .action-buttons .btn-portfolio {
-    background-color: var(--purple-accent);
-    color: var(--text-light);
-  }
-  
-  .action-buttons .btn-portfolio:hover {
-    background-color: var(--button-hover-darken);
-    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
-  }
-  
-  .action-buttons .btn-hireme:hover {
-    background-color: var(--purple-accent);
-    color: var(--text-light);
-    box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
-  }
+}
