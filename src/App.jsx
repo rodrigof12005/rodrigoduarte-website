@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; 
+import React, { useState } from 'react';
 import Sidebar from './components/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import Services from './components/Services/Services';
@@ -9,17 +9,17 @@ import './index.css';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // NOVO: Estado para o menu mobile
 
-  // Função para renderizar o componente correto com base no estado
   const renderSection = () => {
     switch (activeSection) {
       case 'home':
         return <Home />;
       case 'services':
         return <Services />;
-      case 'experience': 
+      case 'experience':
         return <Experience />;
-      case 'contact': 
+      case 'contact':
         return <Contact />;
       default:
         return <Home />;
@@ -28,11 +28,13 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Passa o estado atual e a função para atualizá-lo como props para o Sidebar */}
-      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
-
+      <Sidebar 
+        activeSection={activeSection} 
+        setActiveSection={setActiveSection} 
+        isMenuOpen={isMenuOpen} 
+        setIsMenuOpen={setIsMenuOpen} 
+      />
       <main className="main-content">
-        {/* Renderiza o componente da seção ativa */}
         {renderSection()}
       </main>
     </div>

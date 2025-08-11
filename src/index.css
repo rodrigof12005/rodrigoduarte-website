@@ -17,7 +17,7 @@
   --button-hover-darken: #7a1fd6;
 }
 html {
-  scroll-behavior: smooth; /* <-- Adiciona rolagem suave para links âncora */
+  scroll-behavior: smooth;
 }
 
 /* Estilos globais para HTML, Body e o div #root */
@@ -43,5 +43,20 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  /* Margem para que o conteúdo não seja coberto pela sidebar na versão desktop */
+  margin-left: 300px;
 }
 
+/* ------------------------------------------------ */
+/* MEDIA QUERY: ESTILOS PARA TELAS MENORES (< 768px) */
+/* ------------------------------------------------ */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Empilha a sidebar e o conteúdo */
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove a margem, pois a sidebar não está mais ao lado */
+    padding-top: 60px; /* Adiciona padding para o conteúdo não ficar por trás da barra do topo */
+  }
+}

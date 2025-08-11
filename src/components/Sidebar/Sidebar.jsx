@@ -1,10 +1,8 @@
 import React from 'react';
 import './Sidebar.css';
-
 import profilePic from '/profile.jpg'; 
 
-function Sidebar({ activeSection, setActiveSection }) {
-  // Array de objetos para renderizar os links de navegação
+function Sidebar({ activeSection, setActiveSection, isMenuOpen, setIsMenuOpen }) {
   const navItems = [
     { name: 'HOME', id: 'home' },
     { name: 'SERVIÇOS', id: 'services' },
@@ -12,21 +10,28 @@ function Sidebar({ activeSection, setActiveSection }) {
     { name: 'CONTATO', id: 'contact' },
   ];
 
+  const handleNavClick = (sectionId) => {
+    setActiveSection(sectionId);
+    setIsMenuOpen(false); // Fecha o menu ao clicar em um link
+  };
+
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${isMenuOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
         <img src={profilePic} alt="Sua Foto" className="profile-pic" />
         <h4 className="your-name">RODRIGO DUARTE</h4>
+        {/* NOVO: Botão de menu visível apenas em mobile */}
+        <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <span className="hamburger-icon"></span>
+        </button>
       </div>
       <nav className="sidebar-nav">
         <ul>
           {navItems.map((item) => (
             <li key={item.id}>
               <a
-                // Adiciona a classe 'active' se o item for a seção ativa
                 className={`nav-item ${activeSection === item.id ? 'active' : ''}`}
-                // O onClick agora chama a função que altera o estado no App.jsx
-                onClick={() => setActiveSection(item.id)}
+                onClick={() => handleNavClick(item.id)}
               >
                 {item.name}
               </a>
@@ -34,7 +39,7 @@ function Sidebar({ activeSection, setActiveSection }) {
           ))}
         </ul>
       </nav>
-     
+      {/* Footer aqui se você ainda quiser mantê-lo */}
     </aside>
   );
 }
