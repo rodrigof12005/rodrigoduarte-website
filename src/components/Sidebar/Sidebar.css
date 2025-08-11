@@ -71,6 +71,16 @@
   transform: translateX(5px);
 }
 
+/* NOVO: Estilos do rodapé */
+.sidebar-footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: var(--text-gray);
+  margin-top: auto; /* Empurra o rodapé para o final do container */
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
 /* NOVO: Estilos do botão de menu */
 .menu-toggle {
   display: none;
@@ -105,7 +115,7 @@
     padding: 10px 20px;
     border-right: none;
     border-bottom: 1px solid var(--border-color);
-    overflow-y: hidden; /* NOVO: Esconde o scroll quando o menu está fechado */
+    overflow-y: hidden;
   }
 
   .sidebar-header {
@@ -117,7 +127,7 @@
   }
   
   .your-name {
-    display: block; /* NOVO: Mostra o nome, mas agora na horizontal */
+    display: block;
     font-size: 1.1em;
   }
   
@@ -131,13 +141,13 @@
     display: block;
   }
 
-  /* Oculta o menu de navegação e footer por padrão */
+  /* Oculta o menu de navegação e rodapé por padrão em mobile */
   .sidebar-nav,
   .sidebar-footer {
     display: none;
   }
   
-  /* NOVO: Quando a sidebar tem a classe 'open', o menu é exibido */
+  /* Quando a sidebar tem a classe 'open', o menu é exibido */
   .sidebar.open {
     height: auto;
     flex-direction: column;
@@ -150,7 +160,7 @@
     margin-top: 20px;
   }
   
-  /* NOVO: Estilos para a animação do ícone de hambúrguer */
+  /* Estilos para a animação do ícone de hambúrguer */
   .sidebar.open .menu-toggle .hamburger-icon {
     transform: rotate(45deg);
   }

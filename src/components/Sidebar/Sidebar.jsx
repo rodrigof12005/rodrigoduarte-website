@@ -39,7 +39,9 @@ function Sidebar({ activeSection, setActiveSection, isMenuOpen, setIsMenuOpen })
           ))}
         </ul>
       </nav>
-      {/* Footer aqui se você ainda quiser mantê-lo */}
+      <footer className="sidebar-footer">
+        <p>Desenvolvido por Rodrigo Duarte</p>
+      </footer>
     </aside>
   );
 }
