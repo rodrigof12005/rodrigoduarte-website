@@ -1,0 +1,96 @@
+/* Estilos para a seção principal de contato */
+.contact-section {
+    padding: 50px;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Estilo para o título principal da página */
+  .contact-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--text-light);
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para a descrição introdutória */
+  .contact-intro {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    color: var(--text-gray);
+    max-width: 800px;
+    margin-bottom: 40px;
+  }
+  
+  /* Container principal das informações */
+  .contact-container {
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  /* Container de informações, agora centralizado */
+  .contact-info-container {
+    width: 500px; 
+    margin: 0 auto; 
+    padding: 30px;
+    background-color: var(--border-color);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .info-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--purple-accent);
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .info-item {
+    color: var(--text-gray);
+    margin-bottom: 10px;
+  }
+  
+  .info-item strong {
+    color: var(--text-light);
+  }
+  
+  .info-item a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .info-item a:hover {
+    color: var(--purple-accent);
+  }
+  
+  /* Estilos para os links sociais */
+  .social-links-contact {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .social-link {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  .social-link:hover {
+    color: var(--purple-accent);
+  }
+  
+  /* Responsividade: para telas menores, o bloco pode ocupar mais espaço */
+  @media (max-width: 768px) {
+    .contact-info-container {
+      width: 90%; /* Ocupa 90% da largura em telas pequenas */
+    }
+  }

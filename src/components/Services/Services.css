@@ -1,0 +1,53 @@
+.services-section {
+    padding: 50px;
+    min-height: calc(100vh - 60px); /* Garante que a seção ocupe a altura da tela */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+  }
+  
+  .services-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+  
+  
+  
+  .services-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Layout de grid responsivo */
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .service-card {
+    background-color: var(--border-color); /* Um cinza escuro para o fundo do cartão */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .service-card h3 {
+    color: var(--purple-customized);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }

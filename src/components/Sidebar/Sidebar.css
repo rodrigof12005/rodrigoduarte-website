@@ -1,0 +1,67 @@
+.sidebar {
+    width: 250px; 
+    background-color: var(--sidebar-dark); 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaçamento entre header, nav e footer */
+    border-right: 1px solid var(--border-color); /* Uma linha sutil à direita */
+  }
+  
+  .sidebar-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color); /* Linha divisória */
+  }
+  
+  .profile-pic {
+    width: 100px; /* Tamanho da imagem de perfil */
+    height: 100px;
+    border-radius: 50%; /* Faz a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo */
+    margin-bottom: 10px;
+    border: 3px solid var(--purple-accent); /* Borda roxa ao redor da foto */
+  }
+  
+  .your-name {
+    color: var(--text-light);
+    font-size: 1.5em;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 900; 
+  }
+  
+  .sidebar-nav {
+    flex-grow: 1; /* Permite que a navegação ocupe o espaço restante */
+    margin-top: 30px; /* Espaço entre o cabeçalho e a navegação */
+  }
+  
+  .sidebar-nav ul {
+    list-style: none; 
+  }
+  
+  .sidebar-nav li {
+    margin-bottom: 15px; /* Espaçamento entre os itens do menu */
+  }
+  
+  .sidebar-nav a {
+    color: var(--text-light); 
+    text-decoration: none; 
+    font-size: 1.0em;
+    padding: 5px 0;
+    display: block; /* Ocupa a largura total para clique */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600; 
+    letter-spacing: 2px; /* <-- Adiciona um pequeno espaçamento entre as letras, como na imagem */
+    text-transform: uppercase; 
+    cursor: pointer;
+  }
+  
+  .sidebar-nav a:hover,
+  .sidebar-nav a.active {
+    color: var(--purple-accent); /* Roxo ao passar o mouse ou item ativo */
+    transform: translateX(5px); /* Efeito sutil ao passar o mouse */
+  }
+  
+  

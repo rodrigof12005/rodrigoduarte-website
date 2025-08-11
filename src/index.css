@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* Reset básico para remover margens e paddings padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Definição de variáveis CSS (custom properties) */
+:root {
+  --bg-dark: #000000;
+  --purple-accent: #780adf;
+  --purple-customized: #a040e0;
+  --text-light: #f0f0f0;
+  --text-gray: #a0a0a0;
+  --border-color: #333333;
+  --button-hover-darken: #7a1fd6;
+}
+html {
+  scroll-behavior: smooth; /* <-- Adiciona rolagem suave para links âncora */
+}
+
+/* Estilos globais para HTML, Body e o div #root */
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Arial', sans-serif;
+  color: var(--text-light);
+  background-color: var(--bg-dark);
+}
+
+/* Container principal que divide a tela */
+.app-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* --- Estilos para o Conteúdo Principal (à direita da Sidebar) --- */
+.main-content {
+  flex-grow: 1;
+  background-color: var(--bg-dark);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+

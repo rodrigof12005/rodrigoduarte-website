@@ -1,0 +1,81 @@
+.experience-section {
+    padding: 50px;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .experience-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+  
+  .experiences-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .experience-item {
+    background-color: var(--border-color);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+  
+  .experience-company {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: var(--purple-customized);
+    margin-bottom: 5px;
+  }
+  
+  .experience-role {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: var(--text-light);
+    margin-bottom: 5px;
+  }
+  
+  .experience-duration {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+    font-style: italic;
+  }
+  
+  .experience-description {
+    color: var(--text-light);
+    line-height: 1.6;
+    text-align: justify;
+  }
+
+  .company-info {
+    display: flex; /* Alinha o nome e o ícone horizontalmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 10px; /* Espaço entre o nome e o ícone */
+    margin-bottom: 5px; /* Adiciona um pouco de espaço abaixo do nome/ícone */
+  }
+  
+  .company-logo {
+    width: 40px; /* Largura do ícone */
+    height: 40px; /* Altura do ícone */
+    vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+  }
