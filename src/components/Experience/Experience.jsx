@@ -29,7 +29,7 @@ function Experience() {
       icon: '/logos/sonda-logo.png',
       role: 'Desenvolvedor Fullstack',
       duration: 'Desembro 2021 - Agosto 2023',
-      description: 'Desenvolvimento e manutenção de sistemas em PHP (Full Stack) para a Defensoria Pública da União-DPU utilizando as tecnologias Laravel(JWT,Passport),ReactJs,Javascript , Api Rest, Bootstrap, Html, Css, Git ,Administração de Banco de Dados , Ajax, Scrum ,Postman, Design patterns, Composer , Apache, Docker, Desenvolvimento para Android utilizando Low Code Kodular .',
+      description: 'Desenvolvimento e manutenção de sistemas em PHP (Full Stack) para a Defensoria Pública da União-DPU utilizando as tecnologias Laravel(JWT,Passport), ReactJs, Javascript , Api Rest, Bootstrap, Html, Css, Git ,Administração de Banco de Dados , Ajax, Scrum ,Postman, Design patterns, Composer , Apache, Docker, Desenvolvimento para Android utilizando Low Code Kodular .',
     },
     {
       company: 'Confederação Nacional dos Municípios CNM',
