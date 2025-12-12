@@ -21,7 +21,7 @@
   .contact-intro {
     font-family: 'Arial', sans-serif;
     font-size: 1.1em;
-    color: var(--text-gray);
+    color: var(--text-white);
     max-width: 800px;
     margin-bottom: 40px;
   }
@@ -78,7 +78,7 @@
   }
   
   .social-link {
-    color: var(--text-gray);
+    color: var(--text-white);
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease;

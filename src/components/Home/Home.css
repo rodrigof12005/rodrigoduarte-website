@@ -41,7 +41,7 @@
 
 .description {
   font-size: 1.1em;
-  color: var(--text-gray);
+  color: var(--text-white);
   max-width: 600px;
   text-align: justify;
 }
