@@ -4,6 +4,13 @@ import './Experience.css';
 function Experience() {
   const experiences = [
     {
+      company: 'Qintess',
+      icon: '/logos/qintess-logo.jpg',
+      role: 'Desenvolvedor Fullstack',
+      duration: 'Setembro 2025 ',
+      description: 'Desenvolvimento e manutenção de sistemas para a SAEB (governo da Bahia , SEI , sistemas governamentais) utilizando PHP , Laravel , Javascript ,React , Vue, Metronic, Bootstrap , Jquery , Ajax , Rest API , CI/CD(GitLab , Jenkis , Sonar , Larastan , Kubernetes), Mysql , Postgres , Sql Server, Cloud , Scrum , Kanban.',
+    },
+    {
       company: 'Montreal',
       icon: '/logos/montreal-logo.webp',
       role: 'Desenvolvedor Fullstack',

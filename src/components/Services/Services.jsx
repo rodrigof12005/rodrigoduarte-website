@@ -13,7 +13,7 @@ function Services() {
     },
     {
       title: 'Gerenciamento de Infraestrutura (Docker, Cloud)',
-      description: 'Configuração e gerenciamento de ambientes de desenvolvimento e produção com Docker e serviços em Cloud, garantindo escalabilidade e alta disponibilidade.',
+      description: 'Configuração e gerenciamento de ambientes de desenvolvimento e produção com Docker , serviços em Cloud , Windows Server , Linux, garantindo escalabilidade e alta disponibilidade.',
     },
     {
       title: 'Banco de Dados (MySQL, Postgresql , SQL Server)',
